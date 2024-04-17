@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "pinia": "^2.1.7",
+    "reset-css": "^5.0.2",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
@@ -41,6 +42,7 @@
     "sass": "^1.74.1",
     "start-server-and-test": "^2.0.3",
     "typescript": "~5.4.0",
+    "unplugin-vue-router": "^0.8.5",
     "vite": "^5.1.6",
     "vitest": "^1.4.0",
     "vue-tsc": "^2.0.6"
