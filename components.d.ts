@@ -10,9 +10,6 @@ declare module 'vue' {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Usercomonents: (typeof import('./src/components/user/UserComonents.vue'))['default']
     UserComonents: typeof import('./src/components/user/UserComonents.vue')['default']
-    Usercpmonets: (typeof import('./src/components/user/UserComonents.vue'))['default']
-    UserUserComonents: typeof import('./src/components/user/UserComonents.vue')['default']
   }
 }
