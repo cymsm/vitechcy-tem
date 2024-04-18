@@ -9,6 +9,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 
 import { VueRouterAutoImports } from 'unplugin-vue-router'
+import Layouts from 'vite-plugin-vue-layouts'
 
 import UnoCSS from 'unocss/vite'
 
@@ -40,6 +41,11 @@ export default defineConfig({
     Components({
       directoryAsNamespace: true,
       collapseSamePrefixes: true
+    }),
+    Layouts({
+      layoutsDirs: 'src/layouts',
+      // pagesDirs: 'src/pages',
+      defaultLayout: 'default'
     })
   ],
   resolve: {

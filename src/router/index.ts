@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router/auto'
+import { setupLayouts } from 'virtual:generated-layouts'
 // import HomeView from '../views/HomeView.vue'
 
 // const router = createRouter({
@@ -20,7 +21,8 @@ import { createRouter, createWebHistory } from 'vue-router/auto'
 // ]
 // })
 const router = createRouter({
-  history: createWebHistory()
+  history: createWebHistory(),
+  extendRoutes: (routes) => setupLayouts(routes)
 })
 
 export default router
