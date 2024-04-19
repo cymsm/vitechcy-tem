@@ -25,10 +25,28 @@
     <div class="i-ph:airplane w-1em h-1em" style="color: red"></div>
   </div>
   <Child @click-count="handleClickCount"></Child>
+  <!-- <ReloadPrompt></ReloadPrompt>
+  hello ppp -->
 </template>
 
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { registerSW } from 'virtual:pwa-register'
+
+onMounted(() => {
+  registerSW({
+    immediate: true,
+    // onNeedRefresh() {
+    //   console.log('need refresh')
+    // },
+    onRegisteredSW(_url, registration) {
+      // 每五秒请求服务器资源，并自动更新
+      setInterval(() => {
+        registration?.update()
+      }, 5000)
+    }
+  })
+})
 const handleClickCount = (count: number) => {
   console.log('click count:', count)
 }

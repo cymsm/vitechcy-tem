@@ -52,6 +52,7 @@
     "unplugin-vue-macros": "^2.9.1",
     "unplugin-vue-router": "^0.8.5",
     "vite": "^5.1.6",
+    "vite-plugin-pwa": "^0.19.8",
     "vite-plugin-vue-layouts": "^0.11.0",
     "vitest": "^1.4.0",
     "vue-tsc": "^2.0.6"
