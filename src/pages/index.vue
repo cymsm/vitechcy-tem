@@ -24,10 +24,17 @@
     <div class="i-twemoji-grinning-face-with-smiling-eyes hover:i-twemoji-face-with-tears-of-joy" />
     <div class="i-ph:airplane w-1em h-1em" style="color: red"></div>
   </div>
+  <Child @click-count="handleClickCount"></Child>
 </template>
 
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+const handleClickCount = (count: number) => {
+  console.log('click count:', count)
+}
+// vue-macros
+// defineOptions({ name: 'HomeIndex' })
+// defineRender(() => <div>Hello World</div>)
 const msg = ref('AUTO-import')
 
 const target = ref(null)
