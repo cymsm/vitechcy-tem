@@ -18,6 +18,8 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 import UnoCSS from 'unocss/vite'
 
+import { viteMockServe } from 'vite-plugin-mock'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -77,6 +79,12 @@ export default defineConfig({
         ]
       },
       registerType: 'autoUpdate'
+    }),
+    viteMockServe({
+      // default
+      mockPath: 'mock',
+      // 生产不需要改为false
+      enable: true
     })
   ],
   resolve: {
